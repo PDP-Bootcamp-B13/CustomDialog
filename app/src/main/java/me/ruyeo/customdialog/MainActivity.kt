@@ -9,14 +9,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        Toast.makeText(this, "dsa", Toast.LENGTH_SHORT).show()
-
-        setupUI()
     }
 
-    private fun setupUI() {
-
-        Toast.makeText(this, "OgabekDev", Toast.LENGTH_SHORT).show()
+    override fun onBackPressed() {
+        val dialog=Exitdialog("Do you want to exit !!!!")
+        dialog.onItemClick={
+            finish()
+        }
+        dialog.show(supportFragmentManager," some ")
     }
+
 }

@@ -13,6 +13,7 @@ class Exitdialog (private var title:String):DialogFragment(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setStyle(STYLE_NO_TITLE,R.style.CustomDialog)
     }
 
     override fun onCreateView(
@@ -25,6 +26,9 @@ class Exitdialog (private var title:String):DialogFragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        isCancelable=false //ekranni boshqa joyiga boshganda cancel qilmasligi uchun
+
         var tv_text=view.findViewById<TextView>(R.id.tv_text)
         var tv_cancel=view.findViewById<TextView>(R.id.tv_no)
         var tv_yes=view.findViewById<TextView>(R.id.tv_yes)
