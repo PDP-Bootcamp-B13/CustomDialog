@@ -19,8 +19,4 @@ class MainActivity : AppCompatActivity() {
 
         Toast.makeText(this, "OgabekDev", Toast.LENGTH_SHORT).show()
     }
-
-    private fun initViews(){
-        Log.d("TAG", "initViews: assalom")
-    }
 }
